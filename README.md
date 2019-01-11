@@ -1,85 +1,64 @@
-hola
 # Entrega 05
 
 App que muestra una recycler view donde puede ser editada su estructura, hacer ofertas con gestos para tener descuentos y una calculadora de valorde la isla
 
 
-### Prerequisites
+### 3 Activities ✓
 
-What things you need to install the software and how to install them
+Main Activity, OfertaActivity, PerfilActivity 
 
+### 2 Fragmetns comunicados ✓
+
+PrimerFragment, Segundo Fragment
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
+Para llegar a ellos, abrir el drawer y abrir calculadora
 ```
 
-And repeat
+### Intents con Extras ✓
 
-```
-until finished
-```
+Para pasar de la MainActivity al perfil he usado intents con extras para saber que informacion usar en el ProfileActivity
 
-End with an example of getting some data out of the system or using it for a little demo
+### RecyclerView y CardView ✓
 
-## Running the tests
+En el main activity hay un recycler con cardviews
 
-Explain how to run the automated tests for this system
+### Shared Preferences ✓
 
-### Break down into end to end tests
+La uso para almacenar las ofertas que se hacen y mostrarlas en Drawer/Ofertas, se almacena en ProfileActivity
 
-Explain what these tests test and why
+### Anmaciones ✓
 
-```
-Give an example
-```
+En ProfileActivity cuando se gira el telefono la imagen se redimensiona con una animación para que no oculte la view
 
-### And coding style tests
+### Gestures ✓
 
-Explain what these tests test and why
+En ProfileActivity si dibujas una "M" te provoca un descuento
+En OfertaActivity debes hacer un LongPress para poder eliminar las ofertas
 
-```
-Give an example
-```
+### SeekBar y ProgressBar ✓
 
-## Deployment
+IntroMainActivity se inica con una progressbar
+En ProfileActivity hay una seekbar funcional para ofertar
 
-Add additional notes about how to deploy this on a live system
+### Constrain Layout ✓
+island_card_layout es un constrain layout
 
-## Built With
+### Menu Funcional ✓
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+En el MainActiity hay un menu gfuncinal que activa el modo noche y modo lista
 
-## Contributing
+### Toast ✓
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Todas las opciones que no están habilitadas muestran un Toast, por ejemplo "añadir Isla"
 
-## Versioning
+### Snack Bar ✓
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+En ProfileActivity al cancelar la oferta que repregunta con un SnackBar
 
-## Authors
+### Logs ✓
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+Para programar heusado infinidad de logs, los he ido quitando. En PrimerFragment.kt->onStart he dejado uno
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+## Comentarios ✓
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+He comentado casi todas las funciones
