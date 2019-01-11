@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Entrega05</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="logo_de_la_app">Logo de la App</string>
+    <string name="titulo">Titulo</string>
+    <string name="enviar_oferta">Enviar oferta</string>
+    <string name="elija_el_total_a_ofertar">Elija el total a ofertar</string>
+    <string name="todo">TODO</string>
+    <string name="textview">TODO</string>
+    <string name="_0">0$</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="escriba_los_acres_de_superficie_de_su_isla">Escriba los ACRES de superficie de su isla</string>
+    <string name="europa">Europa</string>
+    <string name="am_rica">América</string>
+    <string name="ocenia">Oceanía</string>
+    <string name="africa">África</string>
+    <string name="asia">Asia</string>
+    <string name="elija_el_continente">Elija el continente</string>
+    <string name="calcular">CALCULAR</string>
+    <string name="precio_estimado">Valor estimado</string>
+</resources>

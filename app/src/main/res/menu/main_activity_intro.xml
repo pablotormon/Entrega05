@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_modo_lista"
+        android:orderInCategory="100"
+        android:title="Modo lista"
+        app:showAsAction="never"
+        android:checkable="true"/>
+
+    <item
+        android:id="@+id/action_modo_noche"
+        android:orderInCategory="100"
+        android:title="Modo noche"
+        app:showAsAction="never"
+        android:checkable="true"/>
+
+
+
+</menu>

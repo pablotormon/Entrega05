@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mis_islas"
+            android:icon="@drawable/ic_isla"
+            android:iconTint="@color/colorMain"
+            android:title="Mis Islas" />
+        <item
+                android:id="@+id/nav_mis_ofertas"
+                android:icon="@drawable/ic_ofertas"
+                android:title="Mis ofertas"/>
+        <item
+            android:id="@+id/nav_calc"
+            android:icon="@drawable/ic_calc"
+            android:title="Calculadora" />
+        <item
+                android:id="@+id/nav_ranking"
+                android:icon="@drawable/ic_ranking"
+                android:title="Ranking mundial"/>
+    </group>
+
+
+</menu>
