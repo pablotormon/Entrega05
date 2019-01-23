@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //Inflo la layout principal
+        //Inflo la layout6 principal
         setContentView(R.layout.activity_main)
 
         //Creo la lista de Islas y el registro en SharedPreferences para guardar ofertas
