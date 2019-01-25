@@ -2,11 +2,19 @@
 <resources>
     <color name="colorPrimary">#fa7268</color>
     <color name="colorPrimaryDark">#fa7268</color>
-    <color name="colorAccent">#fa7268</color>
+    <color name="colorAccent">#FA7268</color>
     <color name="colorMain">#fa7268</color>
     <color name="colorMain2">#f9dbd9</color>
     <color name="colorWhite">#ffffff</color>
     <color name="colorLightGrey">#f4f4f4</color>
     <color name="colorHardGrey">#585757</color>
     <color name="colorBlack">#000000</color>
+    <color name="material_green_600">#fa7268</color>
+    <color name="material_green_500">#fa7268</color>
+    <color name="material_green_700">#fa7268</color>
+    <color name="material_green_a200">#fa7268</color>
+    <color name="material_lime_a800">#585757</color>
+    <color name="material_lime_50">#FFFFFF</color>
+    <color name="material_purple_a700">#AA00FF</color>
+    <color name="material_purple_500">#9C27B0</color>
 </resources>

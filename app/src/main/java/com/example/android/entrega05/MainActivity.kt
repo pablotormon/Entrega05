@@ -13,9 +13,12 @@ import android.support.v7.widget.StaggeredGridLayoutManager
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import com.example.android.entrega05.data.IslandListAdapter
 import com.example.android.entrega05.model.Island
+import com.firebase.ui.auth.AuthUI
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main_activity_intro.*
 import kotlinx.android.synthetic.main.content_main_activity_intro.*
@@ -31,9 +34,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var modoNoche: Boolean = false
     private var modoLista: Boolean = false
+    private var mAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mAuth = FirebaseAuth.getInstance()
+
 
         //Inflo la layout6 principal
         setContentView(R.layout.activity_main)
@@ -55,6 +61,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         //Configuro el menu drawer
         configurarElDrawer()
+
+    }
+
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = mAuth?.currentUser
+        if (currentUser == null) {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
 
     }
 
@@ -140,13 +157,43 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_ranking -> {
                 Toast.makeText(this, "Disponible para cuenta premium", Toast.LENGTH_LONG).show()
             }
-
+            R.id.nav_sign_out -> {
+                AuthUI.getInstance()
+                    .signOut(this)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            startActivity(
+                                Intent(this, LoginActivity::class.java)
+                            )
+                            finish()
+                        } else {
+                            Toast.makeText(this, "Ha habido un error", Toast.LENGTH_LONG).show()
+                        }
+                    }
+                Toast.makeText(this, "Has cerrado sesión de IslandMarket", Toast.LENGTH_LONG).show()
+            }
+            R.id.nav_eliminar -> {
+                AuthUI.getInstance()
+                    .delete(this)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            startActivity(
+                                Intent(
+                                    this, LoginActivity::class.java
+                                )
+                            )
+                            finish()
+                        } else {
+                            Toast.makeText(this, "Ha habido un error", Toast.LENGTH_LONG).show()
+                        }
+                    }
+                Toast.makeText(this, "Has eliminado tu cuenta de Island Market", Toast.LENGTH_LONG).show()
+            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
-
 
     /**
      * Funcion que inicializa un layout manager y un adapter y los enlaza con el xml
@@ -265,6 +312,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        val currentUser = mAuth?.currentUser
+
+        val navigationView = findViewById<NavigationView>(R.id.nav_view)
+        val headerView = navigationView.getHeaderView(0)
+
+        var drawerName = headerView.findViewById<TextView>(R.id.drawer_user_name)
+        var drawerEmail = headerView.findViewById<TextView>(R.id.drawer_user_status)
+
+        drawerName.text = currentUser!!.displayName.toString()
+        drawerEmail.text = currentUser.email.toString()
+
+
     }
 
     /**

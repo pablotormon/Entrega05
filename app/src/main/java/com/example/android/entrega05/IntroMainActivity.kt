@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_intro_main.*
+import java.io.FileOutputStream
 
 /**
  * Clase Main donde simplemente se visualiza una barra de cargando
@@ -52,7 +53,8 @@ class IntroMainActivity : AppCompatActivity() {
      */
     private fun irAMainActivity() {
 
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, LoginActivity::class.java))
         finish()
+        
     }
 }

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "768425472569",
+    "firebase_url": "https://entrega05-57d1e.firebaseio.com",
+    "project_id": "entrega05-57d1e",
+    "storage_bucket": "entrega05-57d1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768425472569:android:74932ca32c308465",
+        "android_client_info": {
+          "package_name": "com.example.android.entrega05"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768425472569-sftoeegf4f36nj2atm0a326go4707k4i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.entrega05",
+            "certificate_hash": "25eaf3cc25eda969ddbce51401f8c1493d2ac05e"
+          }
+        },
+        {
+          "client_id": "768425472569-vmq7goca10jpk9rhsp5asg5t6s444n0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzOdITelsrBAoalV3riC5gWS6dVfVKp5U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768425472569-vmq7goca10jpk9rhsp5asg5t6s444n0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -24,4 +24,15 @@
     <string name="elija_el_continente">Elija el continente</string>
     <string name="calcular">CALCULAR</string>
     <string name="precio_estimado">Valor estimado</string>
+    <!-- Facebook application ID and custom URL scheme (app ID prefixed by 'fb'). -->
+    <string name="facebook_application_id" translatable="false">YOUR_APP_ID</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
+    <string name="mis_islas">Mis Islas</string>
+    <string name="mis_ofertas">Mis ofertas</string>
+    <string name="calculadora">Calculadora</string>
+    <string name="ranking_mundial">Ranking mundial</string>
+    <string name="account_options">Account options</string>
+    <string name="sign_out">Cerrar sesión</string>
+    <string name="delete_account">Eliminar cuenta</string>
+
 </resources>

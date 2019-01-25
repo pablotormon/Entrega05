@@ -6,22 +6,43 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_mis_islas"
+            android:checkable="true"
+            android:enabled="true"
             android:icon="@drawable/ic_isla"
             android:iconTint="@color/colorMain"
-            android:title="Mis Islas" />
+            android:title="@string/mis_islas"
+            android:visible="true" />
         <item
                 android:id="@+id/nav_mis_ofertas"
                 android:icon="@drawable/ic_ofertas"
-                android:title="Mis ofertas"/>
+                android:title="@string/mis_ofertas"/>
         <item
             android:id="@+id/nav_calc"
             android:icon="@drawable/ic_calc"
-            android:title="Calculadora" />
+            android:title="@string/calculadora" />
         <item
                 android:id="@+id/nav_ranking"
                 android:icon="@drawable/ic_ranking"
-                android:title="Ranking mundial"/>
+                android:title="@string/ranking_mundial"/>
     </group>
+
+    <item
+        android:enabled="true"
+        android:iconTint="@color/colorHardGrey"
+        android:title="@string/account_options"
+        android:visible="true"
+        >
+        <menu>
+            <item
+                android:id="@+id/nav_sign_out"
+                android:icon="@android:drawable/ic_menu_close_clear_cancel"
+                android:title="@string/sign_out" />
+            <item
+                android:id="@+id/nav_eliminar"
+                android:icon="@drawable/ic_delete"
+                android:title="@string/delete_account" />
+        </menu>
+    </item>
 
 
 </menu>
